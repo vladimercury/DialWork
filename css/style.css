@@ -1,0 +1,38 @@
+img.linkImage
+{
+	width: 100%;
+}
+
+a.thumbnail
+{
+	text-decoration: none;
+	color: #799;
+	text-align: center;
+	background-color:#edeef0;
+}
+
+a.thumbnail:hover
+{
+	opacity: 0.6;
+}
+
+body
+{
+	padding-top: 50px;
+	background-color: #fff;
+	background-position: center;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	overflow-y: scroll;
+}
+
+.thumbnails{
+	margin-bottom: 10%;	
+}
+
+.breadcrumb{
+	background-color: #edeef0;
+}

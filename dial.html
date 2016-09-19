@@ -1,0 +1,56 @@
+<!doctype HTML>
+<html>
+<head>
+    <title>Speed Dial v3.0 2016</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+
+<body id="dialBody" onload="dialInit()" onkeyup="easterEvent(event)">
+
+    <div id="navigationBar" class="navbar navbar-static navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container" >
+                <a class="brand" href="javascript:dialToggleContent()" id="contentToggle"><i class="icon-chevron-up icon-white"></i></a>
+                <a class="brand" href="javascript:backgroundToggle()"><i class="icon-picture icon-white"></i></a>
+                <a class="brand" href="javascript:links_stackBack(0)"><i class="icon-home icon-white"></i></a>
+                <span id="easteregg"></span>
+                <div class="navbar-search pull-right">
+                    <input type="text" class="search-query span3" placeholder="Search" id="searchQuery" onkeydown="search_searchInputKeyCheck( event )">
+                </div>
+                <ul class="nav pull-right" role="navigation">
+                    <li class="dropdown" align="left">
+                        <a id="searchResource" class="dropdown-toggle" role="button" href="#" data-toggle="dropdown">
+                            <i class="icon-search icon-white"></i>
+                            #SEARCH_RESOURCE#
+                            <i class="icon-chevron-up icon-white"></i>
+                        </a>
+                        <ul id="searchResourceList" class="dropdown-menu" role="menu">
+
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="mainContent" class="container">
+
+    </div>
+
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/date.format.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/dynamic.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/navbar.js"></script>
+    <script type="text/javascript" src="js/search.js"></script>
+    <script type="text/javascript" src="js/links.js"></script>
+    <script type="text/javascript" src="js/background.js"></script>
+    <script type="text/javascript" src="js/dial.js"></script>
+
+</body>
+
+</html>
