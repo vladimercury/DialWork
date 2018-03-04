@@ -36,3 +36,7 @@ body
 .breadcrumb{
 	background-color: #edeef0;
 }
+
+a:hover {
+	cursor: pointer;
+}

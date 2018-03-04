@@ -1,35 +1,67 @@
-currentTab = '';
-contentVisible = true;
+var links = dialLinks || {
+    root: {
+        name: "Root",
+        links: [],
+        parent: null
+    }
+};
 
-function dialInit()
-{
-	search_searchInit();
-	dialSetLinksTab();
-	backgroundInit();
-}
+var App = {};
 
-function dialSetLinksTab()
-{
-	if( currentTab != 'links' )
-	{
-		links_stackBack( 0 );
-		currentTab = 'links';
+App.breadcrumbs = new Vue({
+    el: "#bread",
+    data: {
+        bread: []
+    },
+    methods: {
+        goTo: function(dir) {
+            App.dial.goTo(dir);
+        }
+    }
+});
+
+App.dial = new Vue({
+	el: "#dial",
+	data: {
+        current: links.root
+	},
+	methods: {
+        goTo: function(dir) {
+            var current = links[dir] || links.root,
+                crumbs = [
+                    {
+                        name: current.name,
+                        ref: dir,
+                        active: false
+                    }
+                ];
+
+            this.current = current;
+            while (current && current.parent) {
+                var ref = current.parent;
+                current = links[ref];
+                if (current) {
+                    crumbs.unshift({
+                       name: current.name,
+                       ref: ref,
+                       active: true
+                    });
+                }
+            }
+            App.breadcrumbs.bread = crumbs;
+        }
+    }
+});
+
+
+App.navbar = new Vue({
+	el: "#navbar",
+	data: {},
+	methods: {
+        goRoot: function() {
+            App.dial.goTo('root');
+        }
 	}
-}
+});
 
-function dialSetPeopleTab()
-{
-	//navbar_SetTab('peopleNavbarTab');
-}
-
-function dialToggleContent(){
-	contentVisible = !contentVisible;
-	if (contentVisible){
-		document.getElementById('mainContent').style.visibility = 'visible';
-		document.getElementById('contentToggle').innerHTML = '<i class="icon-chevron-up icon-white"></i>';
-	}
-	else{
-		document.getElementById('mainContent').style.visibility = 'hidden';
-		document.getElementById('contentToggle').innerHTML = '<i class="icon-chevron-down icon-white"></i>';
-	}
-}
+App.dial.goTo('root');
