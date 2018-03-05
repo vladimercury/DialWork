@@ -55,6 +55,11 @@ var dialLinks = {
 				href: "https://www.youtube.com/feed/subscriptions"
 			},
             {
+                name: "Twitch following",
+                pic: "",
+                href: "https://www.twitch.tv/directory/following"
+            },
+            {
                 name: "Mail.ru mail",
                 pic: "mailru.png",
                 href: "https://e.mail.ru/messages/inbox/"
@@ -80,7 +85,16 @@ var dialLinks = {
 	vk: {
 		name: "VK menu",
 		links: [
-
+            {
+                name: "Messages",
+                pic: "",
+                href: "https://vk.com/im"
+            },
+            {
+                name: "Newsfeed",
+                pic: "",
+                href: "https://vk.com/feed"
+            }
 		],
 		parent: "root"
 	}
