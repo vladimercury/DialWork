@@ -1,4 +1,25 @@
 var dialLinks = {
+    "101ru": {
+        name: "101.ru online radio",
+        links: [
+            {
+                name: "Trance",
+                pic: "101rutrance.png",
+                href: "http://trance.101.ru"
+            },
+            {
+                name: "Tech house",
+                pic: "101rutechhouse.png",
+                href: "http://techhouse.101.ru"
+            },
+            {
+                name: "Drum 'n' bass",
+                pic: "101rudrumbass.png",
+                href: "http://drumnbass.101.ru"
+            }
+        ],
+        parent: "root"
+    },
     google: {
         name: "Google",
         links: [
@@ -46,18 +67,23 @@ var dialLinks = {
         links: [
 			{
 				name: "VK",
-				pic: "",
+				pic: "vk.png",
 				ref: "vk"
 			},
 			{
 				name: "Youtube subscriptions",
-				pic: "",
+				pic: "youtube.png",
 				href: "https://www.youtube.com/feed/subscriptions"
 			},
             {
                 name: "Twitch following",
-                pic: "",
+                pic: "twitch.png",
                 href: "https://www.twitch.tv/directory/following"
+            },
+            {
+                name: "Megogo",
+                pic: "megogo.png",
+                href: "https://megogo.ru/ru"
             },
             {
                 name: "Mail.ru mail",
@@ -78,6 +104,21 @@ var dialLinks = {
                 name: "GitHub",
                 pic: "github.png",
                 href: "https://github.com/"
+            },
+            {
+                name: "101.ru radio",
+                pic: "101ru.png",
+                ref: "101ru"
+            },
+            {
+                name: "Pikabu",
+                pic: "pikabu.png",
+                href: "https://pikabu.ru/"
+            },
+            {
+                name: "Fontanka",
+                pic: "fontanka.png",
+                href: "http://www.fontanka.ru/"
             }
 		],
         parent: null
@@ -87,13 +128,18 @@ var dialLinks = {
 		links: [
             {
                 name: "Messages",
-                pic: "",
+                pic: "vkim.png",
                 href: "https://vk.com/im"
             },
             {
                 name: "Newsfeed",
-                pic: "",
+                pic: "vkfeed.png",
                 href: "https://vk.com/feed"
+            },
+            {
+                name: "Audio",
+                pic: "vkaudio.png",
+                href: "https://vk.com/audio"
             }
 		],
 		parent: "root"
